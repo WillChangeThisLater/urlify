@@ -1,4 +1,4 @@
-module urlify
+module github.com/WillChangeThisLater/urlify
 
 go 1.22.5
 
