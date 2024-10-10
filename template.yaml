@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+# See https://stackoverflow.com/questions/68821753/managing-files-inside-multipart-form-data-api-gateway-request-body for why this 'Globals' section is necessary
+Globals:
+  Api:
+    BinaryMediaTypes:
+      - "*~1*"
+Resources:
+  LambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      ImageUri: urlify:latest
+      Events:
+        ApiGateway:
+          Type: Api
+          Properties:
+            Path: /urlify
+            Method: post
+
+
