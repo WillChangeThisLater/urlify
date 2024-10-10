@@ -2,7 +2,7 @@
 ```bash
 ./build.sh
 sudo ln -s $(pwd)/urlify /usr/local/bin/urlify
-urlify build.sh
+urlify build.sh # This won't work unless you have my IAM credentials
 ```
 
 ## Why would I use this?
