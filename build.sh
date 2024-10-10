@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+# deployment script. this is keyed to my personal AWS creds and ECR repo
+
 REGION="us-east-2"
 LOCAL_TAG="urlify:latest"
 REPO=${LOCAL_TAG%%:*}
